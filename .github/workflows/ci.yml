@@ -39,6 +39,5 @@ jobs:
         image: edgarwangsy/test/test-image
         tags: v1, latest
         registry: docker.io
-        dockerfile: test.ci
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
