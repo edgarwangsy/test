@@ -1,0 +1,10 @@
+language: java
+
+services:
+  - docker
+
+jdk: oraclejdk11
+
+script:
+  - ./gradlew build docker
+  - ./gradlew release -Prelease.disableChecks -Prelease.pushTagsOnly -PGITHUB_TOKEN=$GITHUB_TOKEN
